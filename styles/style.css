@@ -1,0 +1,152 @@
+/* font-family: 'IBM Plex Mono', monospace;
+    font-family: 'IBM Plex Mono', monospace;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-family: 'IBM Plex Sans', sans-serif; */
+
+body{
+    /*max-width: 100%; */ 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+header {
+    /* El ancho en 100% o solo 1440px */
+    width: 1440px;
+    /* Las posiciones son a mi criterio? */
+    position: fixed;
+    height: 80px;
+    /* top: 0; este dato puedo omitirlo?, ya que esta normalizado el html */
+    /* padding: 10px 5%; El padding es a mi gusto?, 
+    en las especificaciones del proyecto no encontre estos detalles */
+    background: #ffffff;
+    opacity: 100%;
+    display: block;
+}
+
+header img {
+    float: left;
+}
+
+nav.menu {
+    position: relative;
+}
+
+header nav input{
+    float: right;
+} 
+
+/*header nav label {
+    float: right;
+}*/
+
+header nav ul{
+    /*decidi usar nav y no .menu, porque estoy 
+    dando propiedades a la caja de mi lista no numerada*/
+    width: 100%;
+    position: absolute;
+    top: 45px;
+    right: 0;
+    list-style-type: none;
+    background: #0000EC;
+    overflow: hidden;
+    height: 0; 
+    /*Overflow y height trabajan juntos, overflow tiene 
+    un valor para ocultar el contenido de la caja y el height
+    le da una altura a esa caja, siendo opx estará oculta siempre.*/
+}
+
+header nav.menu ul li{
+    /*decidi usar nav y no .menu*/
+    position: relative;
+    /*estas propiedades afectan la caja del listado pero no afectan el listado, 
+    los titulos en listado, es por eso que debo moverlos a la "a".
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 16px;
+    color: #060A24;
+    letter-spacing: 1000px;
+    line-height: 28px;*/
+}
+
+header nav ul li:hover {
+    background: #ffffff ;
+}
+
+header nav ul li a{
+    position: relative;
+    text-decoration: none;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 16px;
+    color: #060A24;
+    /* letter-spacing: 10px; no esta haciendo nada */
+    line-height: 28px;
+    padding: 16px 5%;
+    display: block; 
+}
+header nav ul li a:hover {
+    color: blue;
+}
+header nav #checkbox:checked ~ ul {
+    /*~ (virgulilla) combinators*/
+    height: 224px;
+}
+header nav #checkbox {
+    display: block;
+    width: 40px;
+    height: 32px;
+    opacity: 100px;
+    z-index: 2;
+    position: absolute;
+}
+
+
+
+/* header img {
+    float: left, tengo dos opciones, esta y la opcion donde detallo
+    las caracteristicas de ubicación de mi logo y mi nav de acuerdo 
+    con lo pedido en el proyecto, omito este header img con float o 
+    lo utilizo incluyendole los detalles de abajo? ;
+}
+header nav {
+    float: right; sera que estas opciones me dan los mismos 
+    resultados, los que exige Acámica?
+} */
+/* #logo{
+    position: absolute;
+    float: left;
+    left: 100px;
+    top: 22px;
+    width: 36px;
+    height: 36px;
+} */
+/*header nav {
+    float: right; 
+     sera que estas opciones me dan los mismos 
+    resultados, los que exige Acámica?
+}*/
+/* #logo {
+    position: absolute;
+    left: 100px;
+    top: 22px;
+    width: 36px;
+    height: 36px;
+} */
+
+padding :left
+margin lef del header completo
+
+
+
+flex 
+
+
+
+
+
+
