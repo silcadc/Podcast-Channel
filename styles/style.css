@@ -3,150 +3,229 @@
     font-family: 'IBM Plex Sans', sans-serif;
     font-family: 'IBM Plex Sans', sans-serif; */
 
-body{
-    /*max-width: 100%; */ 
-}
-
-* {
+ * {
     margin: 0;
     padding: 0;
     border: 0;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
+} 
+
+body {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
 }
 
 header {
-    /* El ancho en 100% o solo 1440px */
-    width: 1440px;
-    /* Las posiciones son a mi criterio? */
     position: fixed;
-    height: 80px;
-    /* top: 0; este dato puedo omitirlo?, ya que esta normalizado el html */
-    /* padding: 10px 5%; El padding es a mi gusto?, 
-    en las especificaciones del proyecto no encontre estos detalles */
-    background: #ffffff;
-    opacity: 100%;
-    display: block;
+    background-color: greenyellow;
+    width: 100%;
+    height: 70px;
+    top: 0;
+    padding: 15px 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
-header img {
-    float: left;
-}
-
-nav.menu {
+#article-first {
     position: relative;
+    width: 100%;
+    background-color: lightgreen;
+    top: 70px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
 }
 
-header nav input{
-    float: right;
+#article-second {
+    position: relative;
+    width: 100%;
+    background-color: lightpink;
+    top: 70px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+}
+
+#footer {
+    position: relative;
+    width: 100%;
+    background-color: lightsteelblue;
+    top: 70px;
+    padding: 15px 10%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+#article-first #greeting {
+    position: relative;
+    width: 100%;  
+    height: auto;
+    padding: 15px 10%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    background-color: lightblue;
+}
+
+h1 {
+    width: 100%;
+    padding: 10px 5%;
+    font-family: 'IBM Plex Sans', sans-serif;
+    color: #060A24;
+    font-size: 3rem;    
+}
+
+p {
+    width: 100%;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 14px;
+    padding: 10px 5%;
+    color: #060A24;
+    letter-spacing: 0;
+    line-height: 25px;
 } 
 
-/*header nav label {
-    float: right;
-}*/
-
-header nav ul{
-    /*decidi usar nav y no .menu, porque estoy 
-    dando propiedades a la caja de mi lista no numerada*/
+.button{
     width: 100%;
-    position: absolute;
-    top: 45px;
-    right: 0;
-    list-style-type: none;
-    background: #0000EC;
-    overflow: hidden;
-    height: 0; 
-    /*Overflow y height trabajan juntos, overflow tiene 
-    un valor para ocultar el contenido de la caja y el height
-    le da una altura a esa caja, siendo opx estará oculta siempre.*/
-}
-
-header nav.menu ul li{
-    /*decidi usar nav y no .menu*/
-    position: relative;
-    /*estas propiedades afectan la caja del listado pero no afectan el listado, 
-    los titulos en listado, es por eso que debo moverlos a la "a".
+    height: 48px;
+    padding: 10px 5%;
+    margin-top: 15px;
+    border: 1px solid #00F3BB;
+    background: #00F3BB 100%;
     font-family: 'IBM Plex Mono', monospace;
     font-size: 16px;
-    color: #060A24;
-    letter-spacing: 1000px;
-    line-height: 28px;*/
 }
 
-header nav ul li:hover {
-    background: #ffffff ;
+#article-first #episodios {
+    width: 100%;
+    background-color: blue;
+} 
+
+.whitefont {
+    width: 100%;
+    padding: 10px 5%;
+    margin: 10px;
+    color:#FFFFFF;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 36px;
+    font-weight: normal;
+    letter-spacing: 0;
+    line-height: 42px;
+    display: flex;
+    flex-flow: column wrap;
 }
 
-header nav ul li a{
+.audiosamples {
+    width: 100%;
+    padding: 10px 5%;  
+}
+
+#article-first #de-donde-venimos {
+    width: 100%;
     position: relative;
-    text-decoration: none;
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 16px;
+    background-color: white;
+}
+
+#de-donde-venimos #cellphone {
+    width: 100%;
+    padding: 10px 5%;  
+}
+
+.blackfont {
+    width: 100%;
+    padding: 10px 5%;
+    margin: 10px;
+    color: #060A24 ;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 36px;
+    font-weight: normal;
+    letter-spacing: 0;
+    line-height: 42px;
+    display: flex;
+    flex-flow: column wrap;
+}
+#article-second #invitadas-os-estelares {
+    width: 100%;
+    position: relative;
+    background-color: white; 
+}
+
+#invitadas-os-estelares .women {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#article-second  #algunos-de-nuestros-temas {
+    background-color: gold;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    padding: 20px 5%; 
+}
+
+#algunos-de-nuestros-temas .logos {
+    background-color: lightgray;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+#algunos-de-nuestros-temas img {
+    position: relative;
+    max-width: 100%;
+    height: auto;
+    margin-top: 10%;
+}
+
+.logos .text {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 15px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 24px;
     color: #060A24;
-    /* letter-spacing: 10px; no esta haciendo nada */
-    line-height: 28px;
-    padding: 16px 5%;
-    display: block; 
-}
-header nav ul li a:hover {
-    color: blue;
-}
-header nav #checkbox:checked ~ ul {
-    /*~ (virgulilla) combinators*/
-    height: 224px;
-}
-header nav #checkbox {
-    display: block;
-    width: 40px;
-    height: 32px;
-    opacity: 100px;
-    z-index: 2;
-    position: absolute;
+    letter-spacing: 0; 
+}   
+
+#article-second #novedades {
+    background-color: blue;
+    width: 100%;
+    padding: 20px 5%;
+    position: relative;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
 }
 
-
-
-/* header img {
-    float: left, tengo dos opciones, esta y la opcion donde detallo
-    las caracteristicas de ubicación de mi logo y mi nav de acuerdo 
-    con lo pedido en el proyecto, omito este header img con float o 
-    lo utilizo incluyendole los detalles de abajo? ;
+#footer span {
+    position: relative;
+    width: 100%;
+    padding: 5%;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 14px;
+    color: #060A24;
+    letter-spacing: 0;
+    line-height: 22px; 
+    display: flex;
+    justify-content: center;
 }
-header nav {
-    float: right; sera que estas opciones me dan los mismos 
-    resultados, los que exige Acámica?
-} */
-/* #logo{
-    position: absolute;
-    float: left;
-    left: 100px;
-    top: 22px;
-    width: 36px;
-    height: 36px;
-} */
-/*header nav {
-    float: right; 
-     sera que estas opciones me dan los mismos 
-    resultados, los que exige Acámica?
-}*/
-/* #logo {
-    position: absolute;
-    left: 100px;
-    top: 22px;
-    width: 36px;
-    height: 36px;
-} */
 
-padding :left
-margin lef del header completo
-
-
-
-flex 
-
-
-
-
-
-
+#footer div {
+    position: relative;
+    width: 100%;
+    padding: 5%;
+    display: flex;
+    justify-content: space-around;
+}
