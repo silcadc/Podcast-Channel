@@ -5,109 +5,117 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Podcast-Channel</title>
-    <link href="../1.Podcast/styles/styles.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@600&display=swap" rel="stylesheet">
     <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <link href="/styles/style.css" rel="stylesheet" type="text/css" >
 </head>
 
 <body>
-    
     <header>
-        <img id="logo" src="../1.Podcast/logos/logo.svg" alt="logo-bd">
+        <img id="logo" src="/logos/logo.svg" alt="logo-bd">
+        <input type="checkbox" id="checkbox-menu">
+        <div class="bars" id="bar1"></div>
+        <div class="bars" id="bar2"></div>
+        <div class="bars" id="bar3"></div>
         <nav>
-            <div class="menu">
-                <input type="checkbox" id="btn-menu" />
-                    <span id="span1"></span>
-                    <span id="span2"></span>
-                    <span id="span3"></span>
-                <ul>
-                    <li><a href="#episodios" tabindex="1">EPISODIOS</a></li>
-                    <li><a href="#de-donde-venimos" tabindex="2">NOSOTROS</a></li>
-                    <li><a href="#invitadas-os-estelares" tabindex="3">ENTREVISTAS</a></li>
-                    <li><a href="#algunos-de-nuestros-temas" tabindex="4">TÓPICOS</a></li>
-                </ul>
-            </div>
+            <ul id="menu">
+                <li><a href="#episodes" tabindex="1">EPISODIOS</a></li> 
+                <li><a href="#we" tabindex="2">NOSOTROS</a></li> 
+                <li><a href="#stellar-guests" tabindex="3">ENTREVISTAS</a></li> 
+                <li><a href="#our-themes" tabindex="4">TÓPICOS</a></li>    
+            </ul>  
         </nav>
     </header>
     
-    <article id="article-first">
-        <section id="greeting">
-            <h1>Hello <strike>world</strike> pale blue dot.</h1>
+    <article>
+        <section>
+            <h1>Hello <span class="line-through">world</span> pale blue dot<span class="blue">.</span></h1>
             <br>
-            <P>El portal de podcasts que explora el mundo de la programación y la tecnología. Nuevos episodios, todos
+            <P id="p1-mobile">Un podcast que explora el mundo de la programación. Nuevos episodios, todos
                 los jueves cada 15 días.</P>
+            <P id="p2-desktop">El portal de podcasts que explora el mundo de la programación y<br> 
+                la tecnología. Nuevos episodios, todos los jueves cada 15 días.</P>
             <br>
-            <button class="button">CONOCÉ MÁS</button>
-            <br>
-        </section>
-        <section id="episodios" class="blue">
-            <h2 class="whitefont">Episodios</h2>
-            <br>
-            <iframe src="https://open.spotify.com/embed-podcast/episode/7AZZy2nJ4R9ZndHW0h2yxt" frameborder="0"
-                allowtransparency="true" allow="encrypted-media" class="audiosamples"></iframe>
-            <br>
-            <iframe src="https://open.spotify.com/embed-podcast/show/4kYCRYJ3yK5DQbP5tbfZby" frameborder="0"
-                allowtransparency="true" allow="encrypted-media" class="audiosamples"></iframe>
-            <br>
-            <iframe src="https://open.spotify.com/embed-podcast/show/5JxcIaIkN8zx3Zy7yD9snv" frameborder="0"
-                allowtransparency="true" allow="encrypted-media" class="audiosamples"></iframe>
-            <br>
-            <iframe src="https://open.spotify.com/embed-podcast/episode/31VyAQAwBiKoHVoYUCEzjQ" frameborder="0"
-                allowtransparency="true" allow="encrypted-media" class="audiosamples"></iframe>
+            <button class="button" tabindex="5">CONOCÉ MÁS</button>
             <br>
         </section>
-        <section id="de-donde-venimos">
-            <img src="../1.Podcast/images/phone.png" id="cellphone" alt="cellphone">
-            <h2 class="blackfont">De dónde venimos</h2>
-            <p>Our porturings, our imagined self-importance, the delusion that we have some privileged position in the
-                Universe, are challenged by this point of pale light. <br>
+        <section id="episodes">
+            <br>
+            <h2>Episodios</h2>
+            <br>
+            <div>
+                <iframe src="https://open.spotify.com/embed-podcast/episode/7AZZy2nJ4R9ZndHW0h2yxt" frameborder="0"
+                    allowtransparency="true" allow="encrypted-media" class="audiosamples" scrolling="no"></iframe>
                 <br>
-                Our planet is a lonely speck in the great enveloping cosmic dark. In our obscurity, in all this
-                vastness,
-                there is no hint that help will come from elsewhere to save us from ourselves.
-            </p>
+                <iframe src="https://open.spotify.com/embed-podcast/show/4kYCRYJ3yK5DQbP5tbfZby" frameborder="0"
+                    allowtransparency="true" allow="encrypted-media" class="audiosamples" scrolling="no"></iframe>
+                <br>
+                <iframe src="https://open.spotify.com/embed-podcast/show/5JxcIaIkN8zx3Zy7yD9snv" frameborder="0"
+                    allowtransparency="true" allow="encrypted-media" class="audiosamples" scrolling="no"></iframe>
+                <br>
+                <iframe src="https://open.spotify.com/embed-podcast/episode/31VyAQAwBiKoHVoYUCEzjQ" frameborder="0"
+                    allowtransparency="true" allow="encrypted-media" class="audiosamples" scrolling="no"></iframe>
+                <br>
+            </div>        
+        </section>
+        <section id="we">
+            <img src="/images/phone.png" id="cellphone" alt="cellphone">
+            <div id="fromwhere">
+                <h2>De dónde <br>venimos</h2>
+                <p>Our porturings, our imagined self-importance, the delusion that we have some privileged position in the
+                    Universe, are challenged by this point of pale light. <br>
+                    <br>
+                    Our planet is a lonely speck in the great enveloping cosmic dark. In our obscurity, in all this
+                    vastness,
+                    there is no hint that help will come from elsewhere to save us from ourselves.
+                </p>
+            </div>
         </section>
     </article>
     
-    <article id="article-second">
-        <section id="invitadas-os-estelares">
-            <h2 class="blackfont">Invitadas/os estelares</h2>
-            <img src="../1.Podcast/images/grace-hopper.png" class="women" alt="Grace-Hopper">
-            <img src="../1.Podcast/images/Katie-Bouman.png" class="women" alt="Katie-Bouman">
-            <img src="../1.Podcast/images/Margaret_Hamilton.png" class="women" alt="Margaret-Hamilton">
-            <img src="../1.Podcast/images/An E.R.A.Univac 1103 computer in the 1950s.png" class="women"
-                alt="Computer-1950s">
-            <img src="../1.Podcast/images/Computer operators with an Eniac — the world’s first programmable general-purpose computer.png"
-                class="women" alt="Eniac">
-            <img src="../1.Podcast/images/susan-kare.png" class="women" alt="Susan-Kare">
-        </section>
-        <section id="algunos-de-nuestros-temas">
-            <h2 class="blackfont">Algunos de nuestros temas</h2>
-            <div class="logos">
-                <img src="../1.Podcast/logos/icon1.svg" alt="trabajo">
-                <h2 class="text">Trabajo remoto</h2>
-            </div>
-            <div class="logos">
-                <img src="../1.Podcast/logos/icon2.svg" alt="repensando">
-                <h2 class="text">Repensando la<br> programación</h2>
-            </div>
-            <div class="logos">
-                <img src="../1.Podcast/logos/icon3.svg" alt="bases">
-                <h2 class="text">Bases del código</h2>
-            </div>
-            <div class="logos">
-                <img src="../1.Podcast/logos/icon4.svg" alt="seguridad">
-                <h2 class="text">Seguridad informatica</h2>
+    <article>
+        <section id="stellar-guests">
+            <h2>Invitadas/os estelares</h2>
+            <div>
+                <img src="/images/grace-hopper.png" class="photos-women" alt="Grace-Hopper">
+                <img src="/images/Katie-Bouman.png" class="photos-women" alt="Katie-Bouman">
+                <img src="/images/Margaret_Hamilton.png" class="photos-women" alt="Margaret-Hamilton">
+                <img src="/images/An E.R.A.Univac 1103 computer in the 1950s.png" class="photos-women"
+                    alt="Computer-1950s">
+                <img src="/images/Computer operators with an Eniac — the world’s first programmable general-purpose computer.png"
+                    class="photos-women" alt="Eniac">
+                <img src="/images/susan-kare.png" class="photos-women" alt="Susan-Kare">
             </div>
         </section>
-        <section id="novelties" class="blue">
-            <h2 class="whitefont" id="center">¿Querés las últimas novedades?</h2>
-            <button class="button">ESCUCHÁ LOS EPISODIOS</button>
+        <section id="our-themes">
+            <h2>Algunos de nuestros temas</h2>
+            <div id="container-logos">
+                <div class="logos">
+                    <img src="/logos/icon1.svg" alt="remote-work">
+                    <h2 class="text-logos">Trabajo remoto</h2>
+                </div>
+                <div class="logos">
+                    <img src="/logos/icon2.svg" alt="rethinking-programming">
+                    <h2 class="text-logos">Repensando la<br> programación</h2>
+                </div>
+                <div class="logos">
+                    <img src="/logos/icon3.svg" alt="code-bases">
+                    <h2 class="text-logos">Bases del código</h2>
+                </div>
+                <div class="logos">
+                    <img src="/logos/icon4.svg" alt="nformatic-security">
+                    <h2 class="text-logos">Seguridad <br id="no-jump">informatica</h2>
+                </div>
+            </div>
         </section>
-    </article>
+        <section id="novelties">
+            <h2 id="center">¿Querés las últimas novedades?</h2>
+            <button class="button" tabindex="6">ESCUCHÁ LOS EPISODIOS</button>
+        </section>
+    </article> 
     
     <footer id="footer">
         <span>&#169; 2019- Hello blue pale dot</span>
@@ -134,6 +142,5 @@
             </a>
         </div>
     </footer>
-
 </body>
 </html>
